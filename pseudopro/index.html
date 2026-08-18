@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PSEUDO PRO — Cambridge Pseudocode IDE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ════════════════════════════════════
+     NAV
+     ════════════════════════════════════ -->
+<nav>
+  <div class="nav-logo">
+    <img src="logo.png" alt="Pseudo Pro"/>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#whatsbuilt">What's Built</a></li>
+    <li><a href="#video">Demo</a></li>
+  </ul>
+  <div class="nav-pill">Cambridge O &amp; A Level</div>
+</nav>
+
+<!-- ════════════════════════════════════
+     HERO
+     ════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-bg-glow"></div>
+  <div class="hero-inner">
+    <div>
+      <h1>Write pseudocode<br/>the <span class="c">Cambridge</span><br/>way</h1>
+      <p class="hero-desc">
+        Pseudo Pro is a <strong>desktop IDE built for Cambridge O and A Level Computer Science students</strong>. Proper syntax highlighting, live execution with interactive input, multi-tab file management — everything you need to practise, nothing you don't.
+      </p>
+      <div class="hero-actions">
+        <a href="#video" class="btn btn-cyan">▶&nbsp; Watch the Demo</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScZtwgpIXl6jhNWRbmCyVRy7nZwk737SK5mbxap7Mpk11V7Nw/viewform?usp=sharing&ouid=100309924998082887412" class="btn btn-outline">⬇&nbsp; Download</a>
+      </div>
+    </div>
+
+    <!-- Hero screenshot -->
+    <div class="hero-ide">
+      <img src="ss1.png" alt="Pseudo Pro IDE screenshot" style="width:100%;display:block;border-radius:var(--r-lg);"/>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     FEATURE PILLS
+     ════════════════════════════════════ -->
+<div class="pill-bar">
+  <div class="pill-row">
+    <div class="pill"><span class="icon">✨</span> Syntax Highlighting</div>
+    <div class="pill"><span class="icon">💡</span> Pseudocode Autocomplete</div>
+    <div class="pill"><span class="icon">▶️</span> Live Execution</div>
+    <div class="pill"><span class="icon">💬</span> Interactive INPUT</div>
+    <div class="pill"><span class="icon">📄</span> Multi-Tab Editing</div>
+    <div class="pill"><span class="icon">📁</span> File Management</div>
+    <div class="pill"><span class="icon">⚠️</span> Error Reporting</div>
+    <div class="pill"><span class="icon">🌙</span> Dark Theme</div>
+    <div class="pill"><span class="icon">⌨️</span> Keyboard Shortcuts</div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════
+     FEATURE SHOWCASE (tabs)
+     ════════════════════════════════════ -->
+<section class="showcase" id="features">
+  <div class="showcase-inner">
+    <div class="center">
+      <div class="sec-label">// Feature Showcase</div>
+      <h2 class="sec-title">A real IDE <span class="hl">for pseudocode</span></h2>
+      <p class="sec-desc">Click through each feature to see exactly what Pseudo Pro can do.</p>
+    </div>
+
+    <div class="showcase-tabs">
+      <button class="stab active" onclick="showPanel('editor', this)">Editor</button>
+      <button class="stab"        onclick="showPanel('terminal', this)">Terminal</button>
+      <button class="stab"        onclick="showPanel('files', this)">File Management</button>
+    </div>
+
+    <div class="showcase-panels">
+
+      <!-- ── EDITOR ── -->
+      <div class="spanel active" id="panel-editor">
+        <div class="spanel-text">
+          <h3>VS Code like IDE</h3>
+          <p>Pseudo Pro is built on the same engine that powers VS Code. That means a professional editing experience right out of the box, with a custom Cambridge pseudocode language layer on top.</p>
+          <ul class="spanel-list">
+            <li>Custom syntax highlighting for every Cambridge keyword</li>
+            <li>Strings, numbers, variables and comments each get their own distinct colour</li>
+            <li>Pseudocode autocomplete — start typing any keyword and accept suggestions instantly</li>
+            <li>Dark theme designed for long study sessions, with line numbers and smooth cursor</li>
+          </ul>
+        </div>
+        <div class="spanel-visual">
+          <img src="ss2.png" alt="Pseudo Pro editor screenshot" style="width:100%;display:block;border-radius:var(--r-lg);"/>
+        </div>
+      </div>
+
+      <!-- ── TERMINAL ── -->
+      <div class="spanel" id="panel-terminal">
+        <div class="spanel-text">
+          <h3>Live terminal with interactive INPUT</h3>
+          <p>When you run your pseudocode, output streams to the terminal in real time. If your program uses INPUT, execution pauses and waits — you type your answer and the program continues exactly as it would in a real run.</p>
+          <ul class="spanel-list">
+            <li>Real-time output as your program executes line by line</li>
+            <li>Fully interactive INPUT — program pauses, you type, it continues</li>
+            <li>Clear error messages that tell you exactly what went wrong and on which line</li>
+            <li>Exit code shown on completion so you know the program finished cleanly</li>
+          </ul>
+        </div>
+        <div class="spanel-visual">
+          <img src="ss3.png" alt="Pseudo Pro terminal screenshot" style="width:100%;display:block;border-radius:var(--r-lg);"/>
+        </div>
+      </div>
+
+      <!-- ── FILE MANAGEMENT ── -->
+      <div class="spanel" id="panel-files">
+        <div class="spanel-text">
+          <h3>Multi-tab file management</h3>
+          <p>Work on multiple pseudocode files at once. Tabs show which files have unsaved changes, and closing a file warns you before anything is lost. A dedicated workspace folder keeps your saved files organised.</p>
+          <ul class="spanel-list">
+            <li>Multiple open tabs — switch between files without losing your place</li>
+            <li>Modified-file indicator (*) on any tab with unsaved changes</li>
+            <li>Unsaved-change warning when you close or quit</li>
+            <li>New, Open, Save, Save As, and Close — all available</li>
+            <li>Supports <code style="font-family:'Fira Code',monospace;font-size:0.85em;color:var(--lime)">.pseudo</code> and <code style="font-family:'Fira Code',monospace;font-size:0.85em;color:var(--lime)">.txt</code> files</li>
+            <li>Dedicated <code style="font-family:'Fira Code',monospace;font-size:0.85em;color:var(--lime)">saved/</code> workspace folder keeps everything in one place</li>
+          </ul>
+        </div>
+        <div class="spanel-visual">
+          <img src="ss4.png" alt="Pseudo Pro file management screenshot" style="width:100%;display:block;border-radius:var(--r-lg);"/>
+        </div>
+      </div>
+    </div><!-- end showcase-panels -->
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     VIDEO DEMO
+     ════════════════════════════════════ -->
+<section class="video-section" id="video">
+  <div class="center">
+    <div class="sec-label">// Watch it Work</div>
+    <h2 class="sec-title">What is <span class="hl">Pseudo Pro?</span></h2>
+  </div>
+  <div class="video-wrap">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/2VZ0sAoZMiY"
+      title="Pseudo Pro Showcase"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     WHAT'S BUILT — CHECKLIST
+     ════════════════════════════════════ -->
+<section class="checklist-section" id="whatsbuilt">
+  <div class="center">
+    <div class="sec-label">// Complete Feature List</div>
+    <h2 class="sec-title">Everything that's <span class="hl">in the IDE</span></h2>
+    <p class="sec-desc">Every feature implemented in the current version of Pseudo Pro.</p>
+  </div>
+  <div class="check-grid">
+
+    <div class="check-col">
+      <div class="check-col-head">Editor</div>
+      <ul class="cklist">
+        <li><span class="ck">✅</span>Custom pseudocode syntax highlighting</li>
+        <li><span class="ck">✅</span>Pseudocode autocomplete</li>
+        <li><span class="ck">✅</span>Dark and Light theme</li>
+        <li><span class="ck">✅</span>Multiple tabs</li>
+        <li><span class="ck">✅</span>Modified-file indicators</li>
+        <li><span class="ck">✅</span>Unsaved-change warnings</li>
+        <li><span class="ck">✅</span>Clipboard operations</li>
+        <li><span class="ck">✅</span>Keyboard shortcuts</li>
+      </ul>
+    </div>
+
+    <div class="check-col">
+      <div class="check-col-head">File Management</div>
+      <ul class="cklist">
+        <li><span class="ck">✅</span><code>.pseudo</code> and <code>.txt</code> file support</li>
+        <li><span class="ck">✅</span>File management</li>
+        <li><span class="ck">✅</span>Dedicated <code>saved/</code> workspace folder</li>
+      </ul>
+    </div>
+
+    <div class="check-col">
+      <div class="check-col-head">Execution</div>
+      <ul class="cklist">
+        <li><span class="ck">✅</span>Pseudocode interpreter</li>
+        <li><span class="ck">✅</span>Terminal output</li>
+        <li><span class="ck">✅</span>Interactive <code>INPUT</code></li>
+        <li><span class="ck">✅</span>Interpreter runs in a thread</li>
+        <li><span class="ck">✅</span>Error reporting</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="logo.png" alt="Pseudo Pro"/>
+    </div>
+
+    <div class="f-text">
+      Built by <strong>Mustafa Adil</strong><br/>
+      <span style="font-size:0.75rem;">Not affiliated with Cambridge Assessment International Education.</span>
+    </div>
+
+    <div class="f-links">
+      <a href="#features">Features</a>
+      <a href="#whatsbuilt">What's Built</a>
+      <a href="#video">Demo</a>
+      <a href="https://github.com/LiterallyEverything/pseudopro" target="_blank" rel="noopener">
+        <svg class="gh-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+        </svg>
+        GitHub
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  function showPanel(id, btn) {
+    document.querySelectorAll('.spanel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.stab').forEach(t => t.classList.remove('active'));
+    document.getElementById('panel-' + id).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
+</body>
+</html>

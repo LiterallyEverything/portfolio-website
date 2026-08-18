@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>homepage :3</title>
+</head>
+
+<body>
+    <div id="stars"></div>
+    <div class="left_side">
+        <div class="stamps">
+            <img src="stamps/endacopia.png" alt="endacopia">
+            <img src="stamps/scp_cb.png" alt="scp_cb">
+            <img src="stamps/nyan_cat.gif" alt="nyan_cat">
+            <img src="stamps/linkin_park.png" alt="linkin_park">
+            <img src="stamps/one_x.png" alt="one_x">
+            <img src="stamps/murder_drones.png" alt="murder_drones">
+        </div>
+    </div>
+    <div class="right_side">
+        <div class="about_box">
+            <p>
+                Haiii! I'm Mustafa :3
+            </p>
+            <p>
+                Weclome to mai website! I do lots of kewl projects around programming, game dev,
+                and engineering.
+            </p>
+        </div>
+        <div class="projects_box">
+            <p>
+                Here are some of my projects that I've worked on X3
+            </p>
+            <h2><a href="pseudopro/">PseudoPro</a></h2>
+            <p>
+            A pseudocode IDE and interpreter for running,
+            debugging, and practising CAIEs A Level pseudocode.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    const stars = document.getElementById("stars");
+    for (let i = 0; i < 150; i++) {
+        const star = document.createElement("div");
+        star.classList.add("star");
+        star.style.left = Math.random() * 100 + "vw";
+        star.style.top = Math.random() * 100 + "vh";
+        const size = Math.random() * 2 + 1;
+        star.style.width = size + "px";
+        star.style.height = size + "px";
+        star.style.opacity = Math.random() * 0.7 + 0.3;
+        stars.appendChild(star);
+    }
+</script>
