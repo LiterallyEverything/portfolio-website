@@ -1,59 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>homepage :3</title>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Mustafa Adil Khan | ~/portfolio</title>
+  <meta name="description" content="Portfolio of Muhammad Mustafa Adil Khan: A Level student at Nixor College, programmer, robotics competitor and builder of PseudoPro.">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <div id="stars"></div>
-    <div class="left_side">
-        <div class="stamps">
-            <img src="stamps/endacopia.png" alt="endacopia">
-            <img src="stamps/scp_cb.png" alt="scp_cb">
-            <img src="stamps/nyan_cat.gif" alt="nyan_cat">
-            <img src="stamps/linkin_park.png" alt="linkin_park">
-            <img src="stamps/one_x.png" alt="one_x">
-            <img src="stamps/murder_drones.png" alt="murder_drones">
-        </div>
+
+  <!-- ============ TOP BAR ============ -->
+  <header class="topbar">
+    <div class="window-dots" aria-hidden="true">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-amber"></span>
+      <span class="dot dot-green"></span>
     </div>
-    <div class="right_side">
-        <div class="about_box">
-            <p>
-                Haiii! I'm Mustafa :3
-            </p>
-            <p>
-                Weclome to mai website! I do lots of kewl projects around programming, game dev,
-                and engineering.
-            </p>
+    <span class="topbar-title">mustafa@portfolio: ~</span>
+    <nav class="topnav" aria-label="Sections">
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#projects">projects</a>
+      <a href="#experience">experience</a>
+      <a href="#awards">awards</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </header>
+
+  <main class="terminal">
+
+    <!-- ============ HERO ============ -->
+    <section class="block hero" id="top">
+      <pre class="ascii" aria-hidden="true">
+ __  __ __  __ _  __
+|  \/  |  \/  | |/ /
+| |\/| | |\/| | ' /
+| |  | | |  | | . \
+|_|  |_|_|  |_|_|\_\  v1.0</pre>
+
+      <p class="line"><span class="prompt">mustafa@portfolio:~$</span> <span class="cmd typed typed-1">whoami</span></p>
+      <h1 class="name">Muhammad Mustafa Adil Khan</h1>
+
+      <p class="line"><span class="prompt">mustafa@portfolio:~$</span> <span class="cmd typed typed-2">cat role.txt</span></p>
+      <p class="role">A Level student @ Nixor College '28 · Programmer · Robotics · Builder</p>
+
+      <p class="line"><span class="prompt">mustafa@portfolio:~$</span> <span class="cmd typed typed-3">ls ./links</span></p>
+      <p class="links">
+        <a class="btn" href="https://www.linkedin.com/in/muhammad-mustafa-adil-khan-0a99003a8/" target="_blank" rel="noopener">linkedin</a>
+        <a class="btn" href="https://muhammadmustafakhan.com/" target="_blank" rel="noopener">website</a>
+        <a class="btn btn-solid" href="https://muhammadmustafakhan.com/pseudopro/" target="_blank" rel="noopener">./run_pseudopro.sh</a>
+      </p>
+
+      <p class="line"><span class="prompt">mustafa@portfolio:~$</span> <span class="cursor" aria-hidden="true"></span></p>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="block" id="about">
+      <h2 class="section-title"><span class="prompt">$</span> cat about.txt</h2>
+      <div class="panel">
+        <p>
+          Hi, I'm <strong>Muhammad Mustafa Adil Khan</strong>, a Pre-Engineering student at
+          <strong>Nixor College</strong> in Karachi, graduating in 2028. I write code, build robots
+          and spend a lot of time in places where software meets science.
+        </p>
+        <p>
+          I was <strong>Lead Programmer</strong> for Pakistan's team at <strong>FIRST Global</strong>,
+          where I built and programmed a robot and competed internationally. I've since built
+          <strong>PseudoPro</strong>, a desktop IDE for Cambridge Computer Science students, and
+          interned at <strong>NASTP</strong> (working with LLMs) and <strong>Ziauddin University</strong>
+          (bioinformatics and molecular biology).
+        </p>
+        <dl class="facts">
+          <div><dt>location</dt><dd>Karachi, Sindh, Pakistan</dd></div>
+          <div><dt>education</dt><dd>A Levels, Pre-Engineering @ Nixor College</dd></div>
+          <div><dt>class_of</dt><dd><span class="status-dot"></span> 2028</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="block" id="skills">
+      <h2 class="section-title"><span class="prompt">$</span> ls -la ~/skills</h2>
+      <div class="grid grid-3">
+
+        <div class="panel">
+          <h3 class="panel-title">code/</h3>
+          <ul class="tags">
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Web Development</li>
+            <li>LLMs</li>
+          </ul>
         </div>
-        <div class="projects_box">
-            <p>
-                Here are some of my projects that I've worked on X3
-            </p>
-            <h2><a href="pseudopro/">PseudoPro</a></h2>
-            <p>
-            A pseudocode IDE and interpreter for running,
-            debugging, and practising CAIEs A Level pseudocode.
-            </p>
+
+        <div class="panel">
+          <h3 class="panel-title">science/</h3>
+          <ul class="tags">
+            <li>Bioinformatics</li>
+            <li>Molecular Biology</li>
+            <li>Biostatistics</li>
+          </ul>
         </div>
-    </div>
+
+        <div class="panel">
+          <h3 class="panel-title">robotics &amp; tools/</h3>
+          <ul class="tags">
+            <li>Robotics</li>
+            <li>GitHub Copilot</li>
+            <li>Replit Agent</li>
+            <li>Adobe Express</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="block" id="projects">
+      <h2 class="section-title"><span class="prompt">$</span> ls ~/projects</h2>
+      <div class="grid grid-2">
+
+        <article class="panel project">
+          <header class="project-head">
+            <h3>PseudoPro<span class="ext">/</span></h3>
+            <span class="badge">featured</span>
+          </header>
+          <p>
+            A desktop IDE built for Cambridge IGCSE / O Level and A Level Computer Science students,
+            so they can write and run Cambridge pseudocode.
+          </p>
+          <ul class="tags small">
+            <li>Python</li>
+            <li>Web Development</li>
+          </ul>
+          <p class="project-links">
+            <a href="https://muhammadmustafakhan.com/pseudopro/" target="_blank" rel="noopener">&gt; visit project</a>
+          </p>
+          <p class="meta">Jul 2026 to Aug 2026</p>
+        </article>
+
+        <article class="panel project">
+          <header class="project-head">
+            <h3>blot-minesweeper<span class="ext">/</span></h3>
+          </header>
+          <p>
+            Generative art for the Hack Club Blot: an algorithm that generates a Minesweeper
+            board, which the Blot machine then draws on paper.
+          </p>
+          <ul class="tags small">
+            <li>JavaScript</li>
+            <li>Generative Art</li>
+          </ul>
+          <p class="meta">May 2024 to Jun 2024</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="block" id="experience">
+      <h2 class="section-title"><span class="prompt">$</span> git log --oneline --career</h2>
+
+      <ol class="log">
+        <li class="log-item">
+          <span class="hash">a1b2c3d</span>
+          <div class="log-body">
+            <h3>Intern <span class="at">@ Ziauddin University</span></h3>
+            <p class="meta">Aug 2026 · Karachi · On-site</p>
+            <ul>
+              <li>Summer Internship Program 2026, "Life at the Bench".</li>
+              <li>Took part in structured academic and laboratory training at the Multidisciplinary Research Laboratories (MDRL 1, 2 &amp; 3).</li>
+              <li>Skills: Bioinformatics, Molecular Biology, Biostatistics.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="log-item">
+          <span class="hash">e4f5a6b</span>
+          <div class="log-body">
+            <h3>Intern <span class="at">@ National Aerospace Science &amp; Technology Park (NASTP)</span></h3>
+            <p class="meta">Jun 2025 to Jul 2025 · Karachi · On-site</p>
+            <ul>
+              <li>Worked with Large Language Models (LLMs) using Python.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="log-item">
+          <span class="hash">7d8e9f0</span>
+          <div class="log-body">
+            <h3>Lead Programmer <span class="at">@ FIRST Global</span></h3>
+            <p class="meta">Mar 2024 to Oct 2024 · Seasonal</p>
+            <ul>
+              <li>Built and programmed the robot.</li>
+              <li>Competed internationally, representing Pakistan.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="log-item">
+          <span class="hash">3b4c5d6</span>
+          <div class="log-body">
+            <h3>A Levels, Pre-Engineering <span class="at">@ Nixor College</span></h3>
+            <p class="meta">Aug 2026 to Aug 2028</p>
+            <ul>
+              <li>Activities and societies: NixorCorporate, NES Nixor.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="log-item">
+          <span class="hash">9c8d7e6</span>
+          <div class="log-body">
+            <h3>O Levels, Pre-Engineering <span class="at">@ Fazaia Degree College</span></h3>
+            <p class="meta">Aug 2023 to Aug 2026 · Grade: 4 A*, 5 A, 1 B</p>
+            <ul>
+              <li>Activities and societies: Robotics, Programming, Basketball, Comics.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ AWARDS ============ -->
+    <section class="block" id="awards">
+      <h2 class="section-title"><span class="prompt">$</span> ls ~/awards</h2>
+      <div class="grid grid-2">
+
+        <article class="panel project">
+          <header class="project-head">
+            <h3>QCEC 2024</h3>
+            <span class="badge">silver</span>
+          </header>
+          <p>Won the Silver Award at The Queen's Commonwealth Essay Competition 2024.</p>
+          <p class="meta">Jan 2024</p>
+        </article>
+
+        <article class="panel project">
+          <header class="project-head">
+            <h3>Robotron 2.0</h3>
+            <span class="badge">winner</span>
+          </header>
+          <p>Winner of the "Speed Coding Python" category at The Lab School's Robotron 2.0.</p>
+          <p class="meta">Dec 2023</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="block" id="contact">
+      <h2 class="section-title"><span class="prompt">$</span> ping mustafa</h2>
+      <div class="panel contact">
+        <p class="ping-line">PING muhammadmustafakhan.com: 56 data bytes</p>
+        <p class="ping-line ok">64 bytes from karachi: icmp_seq=0 ttl=64 time=0.1 ms</p>
+        <p>Always up for a conversation about code, robotics or research. Say hello.</p>
+        <ul class="contact-list">
+          <li><span class="key">linkedin</span> <a href="https://www.linkedin.com/in/muhammad-mustafa-adil-khan-0a99003a8/" target="_blank" rel="noopener">/in/muhammad-mustafa-adil-khan</a></li>
+          <li><span class="key">website</span> <a href="https://muhammadmustafakhan.com/" target="_blank" rel="noopener">muhammadmustafakhan.com</a></li>
+          <li><span class="key">location</span> Karachi, Pakistan</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Muhammad Mustafa Adil Khan <span class="sep">|</span> built with plain HTML &amp; CSS <span class="sep">|</span> <a href="#top">cd ~</a></p>
+  </footer>
+
 </body>
 </html>
-
-<script>
-    const stars = document.getElementById("stars");
-    for (let i = 0; i < 150; i++) {
-        const star = document.createElement("div");
-        star.classList.add("star");
-        star.style.left = Math.random() * 100 + "vw";
-        star.style.top = Math.random() * 100 + "vh";
-        const size = Math.random() * 2 + 1;
-        star.style.width = size + "px";
-        star.style.height = size + "px";
-        star.style.opacity = Math.random() * 0.7 + 0.3;
-        stars.appendChild(star);
-    }
-</script>
